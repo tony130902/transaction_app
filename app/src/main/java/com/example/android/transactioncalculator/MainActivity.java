@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -48,11 +49,8 @@ public class MainActivity extends AppCompatActivity {
         sendImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (amountField.getText().toString().isEmpty()){
+                if (amountField.getText().toString().isEmpty() && messageField.getText().toString().isEmpty() ){
                     amountField.setError("Enter Valid Amount! ");
-                    return;
-                }
-                if (messageField.getText().toString().isEmpty()){
                     messageField.setError("Enter Message ");
                     return;
                 }
@@ -80,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void sendTransaction(int amount , String message , boolean positive){
         list.add(new transactionData(amount , message , positive));
         adapter.notifyDataSetChanged();
