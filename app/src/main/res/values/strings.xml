@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Transaction Calculator</string>
+    <string name="amount_text">Amount</string>
+    <string name="message_text">Message</string>
+    <string name="money_sign">+₹</string>
+    <string name="amount_textview_hint">Amount</string>
+    <string name="message_textview_hint">Message</string>
+    <string name="delete">delete</string>
+    <string name="send">send</string>
+</resources>

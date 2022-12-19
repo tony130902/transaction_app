@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ex_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="#FAF3F3"
+        app:cardPreventCornerOverlap="false"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="8dp"
+        app:cardUseCompatPadding="false"
+        android:layout_alignBottom="@id/ex_recycleview"
+        app:layout_dodgeInsetEdges="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/ex_sign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/money_sign"
+                android:textColor="#388E3C"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ex_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:hint="@string/amount_textview_hint"
+                android:inputType="number"
+                android:maxLength="8"
+                android:minHeight="48dp"
+                android:textColorHint="#616161"
+                android:textSize="16sp"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/ex_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:hint="@string/message_textview_hint"
+                android:inputType="textCapWords"
+                android:maxLines="2"
+                android:minHeight="48dp"
+                android:textColorHint="#616161"
+                android:textSize="16sp"
+                android:autofillHints="" />
+
+            <ImageView
+                android:id="@+id/ex_send"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/send"
+                android:src="@drawable/ic_baseline_send_24"
+                tools:ignore="TouchTargetSizeCheck"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
