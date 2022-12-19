@@ -40,6 +40,9 @@ public class transactionAdapter extends RecyclerView.Adapter<transactionAdapter.
         holder.msg.setText(message);
 
         String amount = Integer.toString(transactionDataList.get(adapterPosition).getAmount());
+        if(transactionDataList.get(holder.getAdapterPosition()).isPositive()){
+            holder.amt.setText("");
+        }
         holder.amt.setText(amount);
     }
 
