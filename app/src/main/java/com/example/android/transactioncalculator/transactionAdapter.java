@@ -41,9 +41,10 @@ public class transactionAdapter extends RecyclerView.Adapter<transactionAdapter.
 
         String amount = Integer.toString(transactionDataList.get(adapterPosition).getAmount());
         if(transactionDataList.get(holder.getAdapterPosition()).isPositive()){
-            holder.amt.setText("");
+            holder.amt.setText("+₹ " + Integer.toString(transactionDataList.get(holder.getAdapterPosition()).getAmount()));
+        }else{
+            holder.amt.setText("-₹ " + Integer.toString(transactionDataList.get(holder.getAdapterPosition()).getAmount()));
         }
-        holder.amt.setText(amount);
     }
 
     @Override
