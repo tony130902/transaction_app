@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                 int amount = Integer.parseInt(amountField.getText().toString().trim());
                 String message = messageField.getText().toString();
                 sendTransaction(amount , message , positive);
-                amountField.setText("");
-                messageField.setText("");
+                amountField.getText().clear();
+                messageField.getText().clear();
 
             }
         });
