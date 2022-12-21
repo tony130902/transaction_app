@@ -7,4 +7,7 @@
     <string name="message_textview_hint">Message</string>
     <string name="delete">delete</string>
     <string name="send">send</string>
+    <string name="Empty_textview">No Transaction Entry!!</string>
+    <string name="action_bar_app_name">Expence Tracker</string>
+    <string name="amount_value">0.00</string>
 </resources>
